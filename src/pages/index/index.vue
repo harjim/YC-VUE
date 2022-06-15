@@ -1,32 +1,35 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" />
+    <image class="logo" src="/static/logo.png"/>
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
   </view>
+  <view>
+    <button @click="counter.increment()">{{ counter.count }}</button>
+  </view>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
+import { useCounterStore } from '@stores/counter'
 import { ref } from 'vue'
+
+const counter = useCounterStore()
 const title = ref('Hello')
 </script>
 
-<style>
+<style lang="scss">
 .content {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
 }
 
 .logo {
-  height: 200rpx;
   width: 200rpx;
-  margin-top: 200rpx;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50rpx;
+  height: 200rpx;
+  margin: 200rpx auto 50rpx;
 }
 
 .text-area {
@@ -36,6 +39,6 @@ const title = ref('Hello')
 
 .title {
   font-size: 36rpx;
-  color: #8f8f94;
+  color: #8F8F94;
 }
 </style>
