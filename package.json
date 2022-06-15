@@ -1,5 +1,5 @@
 {
-  "name": "uni-preset-vue",
+  "name": "yc-vue",
   "version": "0.0.0",
   "scripts": {
     "dev:app": "uni -p app",
@@ -46,8 +46,7 @@
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-3040820220424001",
     "@dcloudio/uni-ui": "^1.4.16",
     "pinia": "^2.0.14",
-    "vue": "^3.2.37",
-    "vue-i18n": "^9.1.9"
+    "vue": "^3.2.37"
   },
   "devDependencies": {
     "@dcloudio/types": "^2.6.11",
