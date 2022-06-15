@@ -8,6 +8,10 @@
   <view>
     <button @click="counter.increment()">{{ counter.count }}</button>
   </view>
+  <view>
+    <uni-badge text="1"/>
+    <uni-badge text="2" type="success"/>
+  </view>
 </template>
 
 <script lang="ts" setup>
