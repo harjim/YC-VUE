@@ -23,7 +23,7 @@ export default defineConfig({
     cors: true,
     proxy: {  // 跨域代理
       '/api': {
-        target: 'http://localhost:3001',
+        target: 'http://190.128.0.190/9000/',
         changeOrigin: true,
         secure: false,
         rewrite: path => path.replace(/^\/api/, '')

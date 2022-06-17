@@ -7,6 +7,7 @@
   </view>
   <view>
     <button @click="counter.increment()">{{ counter.count }}</button>
+    <button @click="getCollectList">{{ counter.count }}</button>
   </view>
   <view>
     <uni-badge text="1"/>
@@ -15,9 +16,23 @@
 </template>
 
 <script lang="ts" setup>
+import QualityScore from '@services/qualityScore'
 import { useCounterStore } from '@stores/counter'
 import { ref } from 'vue'
 
+const qualityScore = new QualityScore()
+
+const getCollectList = async () => {
+  const data = await qualityScore.getCollectList({
+    companyName: '',
+    deptId: '',
+    year: '',
+    type: 0,
+    engineerName: '',
+    scoreMonth: ''
+  })
+  console.log(data)
+}
 const counter = useCounterStore()
 const title = ref('Hello')
 </script>

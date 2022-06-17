@@ -9,6 +9,7 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "noImplicitAny": false,
     "lib": ["esnext", "dom"],
     "types": ["node", "@dcloudio/types", "@dcloudio/uni-ui"],
     "baseUrl": "./",
